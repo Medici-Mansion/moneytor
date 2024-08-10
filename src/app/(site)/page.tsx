@@ -105,7 +105,9 @@ export default function Home() {
           </div> */}
 
         <div className='text-[22px] font-bold'>
-          Try to spend less than last time!
+          {isBudgetSet
+            ? 'Select the categories to reduce'
+            : 'Try to spend less than last time!'}
         </div>
         <div className='h-[1px] w-full bg-[#E5E5EA]'></div>
       </div>
