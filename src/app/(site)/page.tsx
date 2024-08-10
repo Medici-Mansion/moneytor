@@ -10,7 +10,6 @@ const categoryItems = [
     id: 1,
     icon: '/svg/taxi.svg',
     title: 'Taxi',
-    percentage: '45%',
     amount: '180,000 KRW',
     bgColor: 'rgba(255,204,0,0.10)',
   },
@@ -18,8 +17,7 @@ const categoryItems = [
     id: 2,
     icon: '/svg/apple.svg',
     title: 'Apple Service',
-    percentage: '30%',
-    amount: '120,000 KRW',
+    amount: '200,000 KRW',
     width: 30,
     height: 37,
     bgColor: '#F2F2F7',
@@ -28,11 +26,29 @@ const categoryItems = [
     id: 3,
     icon: '/svg/coffee.svg',
     title: 'Coffee',
-    percentage: '25%',
     amount: '400,000 KRW',
     bgColor: 'rgba(52, 199, 89, 0.10)',
   },
+  {
+    id: 4,
+    icon: '/svg/food.svg',
+    title: 'Food',
+    amount: '710,000 KRW',
+    bgColor: 'rgba(52, 199, 89, 0.10)',
+  },
+  {
+    id: 5,
+    icon: '/svg/hospital.svg',
+    title: 'Medical',
+    amount: '80,000 KRW',
+    bgColor: 'rgba(52, 199, 89, 0.10)',
+  },
 ]
+
+const sortedCategoryItems = categoryItems.sort(
+  (a, b) =>
+    parseInt(b.amount.replace(/,/g, '')) - parseInt(a.amount.replace(/,/g, '')),
+)
 
 export default async function Home() {
   return (
@@ -42,7 +58,12 @@ export default async function Home() {
           <div className='p-[10px]'>
             <Image src='/svg/prev.svg' width={14} height={14} alt='Go Back' />
           </div>
-          <div className='flex items-center'>
+          <div className='absolute left-1/2 -translate-x-1/2 transform text-[17px] text-[#8E8E93]'>
+            All Expenses
+          </div>
+
+          {/* 월별 선택 섹션 */}
+          {/* <div className='flex items-center'>
             <div className='p-[10px]'>
               <Image
                 src='/svg/before.svg'
@@ -60,31 +81,22 @@ export default async function Home() {
                 alt='Go Back'
               />
             </div>
+          </div> */}
+
+          <div className='text-[22px] font-bold'>
+            Try to spend less than last time!
           </div>
           <div className='h-[1px] w-full bg-[#E5E5EA]'></div>
         </div>
 
         {/* <PushNotifi /> */}
-        <section className='mt-6 flex flex-col gap-6'>
-          <div className='flex justify-between'>
-            <div>TOTAL</div>
-            <div className='flex items-center gap-1'>
-              <span>400,000 KRW</span>
-              <span className='flex h-[34px] w-[34px] items-center justify-center rounded-full bg-[#F2F2F7]'>
-                <Image src='/svg/edit.svg' height={14} width={14} alt='edit' />
-              </span>
-            </div>
-          </div>
-          <div className='h-[31px] w-full rounded-[100px] bg-[#FFD913]'></div>
-        </section>
 
         <section className='flex flex-col gap-6 py-10'>
-          {categoryItems.map((item) => (
+          {sortedCategoryItems.map((item) => (
             <CategoryItem
               key={item.id}
               icon={item.icon}
               title={item.title}
-              percentage={item.percentage}
               amount={item.amount}
               width={item.width}
               height={item.height}
@@ -93,10 +105,8 @@ export default async function Home() {
           ))}
         </section>
         <section className='flex items-center justify-center'>
-          <div className='rounded-full border-[1.4px] border-[#F2F2F7] bg-white px-[14px] py-[8px]'>
-            <span className='font-sans text-[15px] text-[#8E8E93]'>
-              View All Expenses
-            </span>
+          <div className='flex w-full items-center justify-center rounded-xl border-[#F2F2F7] bg-[#4FC3D7] px-[14px] py-[8px]'>
+            <span className='text-[17px] text-[#FFF]'>Set a budget</span>
           </div>
         </section>
       </main>

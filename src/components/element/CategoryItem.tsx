@@ -4,7 +4,6 @@ import React from 'react'
 interface CategoryItemProps {
   icon: string
   title: string
-  percentage: string
   amount: string
   width?: number
   height?: number
@@ -13,7 +12,6 @@ interface CategoryItemProps {
 const CategoryItem: React.FC<CategoryItemProps> = ({
   icon,
   title,
-  percentage,
   amount,
   width = 73,
   height = 73,
@@ -30,7 +28,6 @@ const CategoryItem: React.FC<CategoryItemProps> = ({
         </div>
         <div className='flex flex-col justify-center'>
           <div>{title}</div>
-          <div>{percentage}</div>
         </div>
       </div>
       <div className='p-4'>{amount}</div>
