@@ -4,7 +4,7 @@ export const appBridge = bridge({
   async check() {
     return true
   },
-  async pushNotification(request: any) {
+  async pushNotification(request: unknown) {
     await new Promise((resolve) => resolve(true))
   },
 })
