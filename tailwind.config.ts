@@ -23,6 +23,7 @@ const config = {
         sans: ['var(--font-geist-sans)', ...fontFamily.sans],
       },
       colors: {
+        'custom-gray': '#8E8E93',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
