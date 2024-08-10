@@ -2,7 +2,7 @@ import '~/styles/globals.css'
 import '@radix-ui/themes/styles.css'
 
 import { GeistSans } from 'geist/font/sans'
-import { type Metadata } from 'next'
+import { type Viewport, type Metadata } from 'next'
 
 import { Theme } from '@radix-ui/themes'
 import { TRPCReactProvider } from '~/trpc/react'
@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   title: 'Moneytor',
   description: '',
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({
