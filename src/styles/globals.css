@@ -62,8 +62,11 @@
 @layer base {
   * {
     @apply border-border;
+    -webkit-overflow-scrolling: touch;
   }
   body {
     @apply bg-background text-foreground;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
   }
 }

@@ -1,7 +1,7 @@
 import { Spinner } from '@radix-ui/themes'
 import { ModeToggle } from '~/components/compound/mode-toggle'
 import { api, HydrateClient } from '~/trpc/server'
-import { LatestPost } from '../_components/post'
+import { PushNotifi } from '../_components/post-message'
 
 export default async function Home() {
   const hello = await api.post.hello({ text: 'from tRPC' })
@@ -15,7 +15,7 @@ export default async function Home() {
         <Spinner />
         <ModeToggle />
 
-        <LatestPost />
+        <PushNotifi />
       </main>
     </HydrateClient>
   )
