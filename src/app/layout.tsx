@@ -9,6 +9,7 @@ import { TRPCReactProvider } from '~/trpc/react'
 import { ThemeProvider } from '~/provider/theme-provider'
 
 import { sfCompact } from '~/assets/fonts'
+import Layout from '~/components/element/Layout'
 
 export const metadata: Metadata = {
   title: 'Moneytor',
@@ -33,7 +34,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <TRPCReactProvider>{children}</TRPCReactProvider>
+            <TRPCReactProvider>
+              <Layout>{children}</Layout>
+            </TRPCReactProvider>
           </ThemeProvider>
         </Theme>
       </body>
