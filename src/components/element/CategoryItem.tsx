@@ -8,6 +8,9 @@ interface CategoryItemProps {
   width?: number
   height?: number
   bgColor?: string
+  onClick?: () => void
+  clickable?: boolean
+  isSelected?: boolean
 }
 const CategoryItem: React.FC<CategoryItemProps> = ({
   icon,
@@ -16,9 +19,23 @@ const CategoryItem: React.FC<CategoryItemProps> = ({
   width = 73,
   height = 73,
   bgColor,
+  onClick,
+  clickable,
+  isSelected,
 }) => {
   return (
-    <div className='flex items-center justify-between'>
+    <div
+      onClick={clickable ? onClick : undefined}
+      className={`flex items-center justify-between rounded-xl ${
+        clickable ? 'cursor-pointer' : 'cursor-default'
+      }`}
+      style={{
+        pointerEvents: clickable ? 'auto' : 'none',
+        backgroundColor: isSelected
+          ? 'rgba(79, 195, 215, 0.12)'
+          : 'transparent',
+      }}
+    >
       <div className='flex gap-4'>
         <div
           className='flex h-[73px] w-[73px] items-center justify-center rounded-full bg-[rgba(255,204,0,0.10)] p-2'
