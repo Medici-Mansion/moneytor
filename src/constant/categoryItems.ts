@@ -30,7 +30,7 @@ export const categoryItems = [
     icon: '/svg/food.svg',
     title: 'Food',
     amount: '710,000 KRW',
-    bgColor: 'rgba(52, 199, 89, 0.10)',
+    bgColor: 'rgba(255, 149, 0, 0.10)',
     today: '10,000 KRW',
   },
   {
@@ -38,7 +38,7 @@ export const categoryItems = [
     icon: '/svg/hospital.svg',
     title: 'Medical',
     amount: '80,000 KRW',
-    bgColor: 'rgba(52, 199, 89, 0.10)',
+    bgColor: 'rgba(255, 59, 48, 0.10)',
     today: '160 KRW',
   },
 ]

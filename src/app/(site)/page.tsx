@@ -72,7 +72,7 @@ export default function Home() {
 
       {/* <PushNotifi /> */}
 
-      <section className='flex flex-col gap-6 py-10'>
+      <section className='flex flex-col gap-2 py-10'>
         {sortedCategoryItems.map((item) => (
           <CategoryItem
             key={item.id}

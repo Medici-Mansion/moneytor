@@ -26,7 +26,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({
   return (
     <div
       onClick={clickable ? onClick : undefined}
-      className={`flex items-center justify-between rounded-xl ${
+      className={`flex items-center justify-between rounded-xl py-2 ${
         clickable ? 'cursor-pointer' : 'cursor-default'
       }`}
       style={{
