@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import CategoryItemWithStatusBar from '~/components/element/CategoryItemWithStatusBar'
 import GoAllButton from '~/components/element/GoAllButton'
+import { bridge } from '~/lib/link-bridge'
 
 const categoryItems = [
   {
@@ -35,13 +36,91 @@ const categoryItems = [
 ]
 
 const page = () => {
+  const handleClick = async () => {
+    await bridge.pushNotification({
+      content: {
+        title: 'Hi! Its’ Moneytor',
+        body: 'Good morning. Make sure to spend wisely..',
+        interruptionLevel: 'timeSensitive',
+      },
+      trigger: { seconds: 5 },
+    })
+    await bridge.pushNotification({
+      content: {
+        title: 'Hi! Its’ Moneytor',
+        body: 'Good morning. Make sure to spend wisely..',
+        interruptionLevel: 'timeSensitive',
+      },
+      trigger: { seconds: 5 },
+    })
+    await bridge.pushNotification({
+      content: {
+        title: 'Hi! Its’ Moneytor',
+        body: 'Good morning. Make sure to spend wisely..',
+        interruptionLevel: 'timeSensitive',
+      },
+      trigger: { seconds: 5 },
+    })
+    await bridge.pushNotification({
+      content: {
+        title: 'Hi! Its’ Moneytor',
+        body: 'Good morning. Make sure to spend wisely..',
+        interruptionLevel: 'timeSensitive',
+      },
+      trigger: { seconds: 5 },
+    })
+    await bridge.pushNotification({
+      content: {
+        title: 'Hi! Its’ Moneytor',
+        body: 'Good morning. Make sure to spend wisely..',
+        interruptionLevel: 'timeSensitive',
+      },
+      trigger: { seconds: 5 },
+    })
+    await bridge.pushNotification({
+      content: {
+        title: 'Hi! Its’ Moneytor',
+        body: 'Good morning. Make sure to spend wisely..',
+        interruptionLevel: 'timeSensitive',
+      },
+      trigger: { seconds: 5 },
+    })
+    await bridge.pushNotification({
+      content: {
+        title: 'Hi! Its’ Moneytor',
+        body: 'Good morning. Make sure to spend wisely..',
+        interruptionLevel: 'timeSensitive',
+      },
+      trigger: { seconds: 5 },
+    })
+    await bridge.pushNotification({
+      content: {
+        title: 'Hi! Its’ Moneytor',
+        body: 'Good morning. Make sure to spend wisely..',
+        interruptionLevel: 'timeSensitive',
+      },
+      trigger: { seconds: 5 },
+    })
+
+    await bridge.pushNotification({
+      content: {
+        title: "Hey Here's Moneytor!",
+        body: 'Save or Starve🤌 Did you check your spending? ',
+        interruptionLevel: 'critical',
+      },
+      trigger: { seconds: 5 },
+    })
+  }
   return (
     <main className='w-full'>
       <div className='flex flex-col gap-6'>
         <div className='p-[10px]'>
           <Image src='/svg/prev.svg' width={14} height={14} alt='Go Back' />
         </div>
-        <div className='absolute left-1/2 -translate-x-1/2 transform text-[17px] text-[#8E8E93]'>
+        <div
+          className='absolute left-1/2 -translate-x-1/2 transform text-[17px] text-[#8E8E93]'
+          onClick={handleClick}
+        >
           Budgets
         </div>
         <div className='text-[22px] font-bold'>Today</div>

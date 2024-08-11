@@ -1,11 +1,10 @@
 'use client'
 
-import { PushNotifi } from '../_components/post-message'
-import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import CategoryItem from '~/components/element/CategoryItem'
 import { useState } from 'react'
 import { categoryItems } from '~/constant/categoryItems'
+import { bridge } from '~/lib/link-bridge'
 
 const sortedCategoryItems = categoryItems.sort(
   (a, b) =>
@@ -19,10 +18,26 @@ export default function Home() {
 
   const isAnyItemSelected = selectedItems.length > 0
 
-  const handleButtonClick = () => {
+  const handleButtonClick = async () => {
     if (isAnyItemSelected) {
       // 하나라도 선택시 budget 페이지로 이동 가능
       router.push('/welcome')
+      await bridge.pushNotification({
+        content: {
+          title: 'APPLE PAY',
+          body: 'Taxi Service - 50,000 KRW',
+          interruptionLevel: 'critical',
+        },
+        trigger: { seconds: 5 },
+      })
+      await bridge.pushNotification({
+        content: {
+          title: 'Hi! Its’ Moneytor',
+          body: 'What are you doin’ with your legs?🦵🦵\nEven Trump walks that distance.',
+          interruptionLevel: 'critical',
+        },
+        trigger: { seconds: 5 },
+      })
     } else {
       setIsBudgetSet(true)
     }
@@ -35,7 +50,7 @@ export default function Home() {
   }
 
   return (
-    <main className='w-full'>
+    <main className='relative w-full'>
       <div className='flex flex-col gap-6'>
         <div className='flex items-center justify-center text-[17px] text-[#8E8E93]'>
           All Expenses
