@@ -5,46 +5,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import CategoryItem from '~/components/element/CategoryItem'
 import { useState } from 'react'
-
-const categoryItems = [
-  {
-    id: 1,
-    icon: '/svg/taxi.svg',
-    title: 'Taxi',
-    amount: '180,000 KRW',
-    bgColor: 'rgba(255,204,0,0.10)',
-  },
-  {
-    id: 2,
-    icon: '/svg/apple.svg',
-    title: 'Apple Service',
-    amount: '200,000 KRW',
-    width: 30,
-    height: 37,
-    bgColor: '#F2F2F7',
-  },
-  {
-    id: 3,
-    icon: '/svg/coffee.svg',
-    title: 'Coffee',
-    amount: '400,000 KRW',
-    bgColor: 'rgba(52, 199, 89, 0.10)',
-  },
-  {
-    id: 4,
-    icon: '/svg/food.svg',
-    title: 'Food',
-    amount: '710,000 KRW',
-    bgColor: 'rgba(52, 199, 89, 0.10)',
-  },
-  {
-    id: 5,
-    icon: '/svg/hospital.svg',
-    title: 'Medical',
-    amount: '80,000 KRW',
-    bgColor: 'rgba(52, 199, 89, 0.10)',
-  },
-]
+import { categoryItems } from '~/constant/categoryItems'
 
 const sortedCategoryItems = categoryItems.sort(
   (a, b) =>
@@ -61,7 +22,7 @@ export default function Home() {
   const handleButtonClick = () => {
     if (isAnyItemSelected) {
       // 하나라도 선택시 budget 페이지로 이동 가능
-      router.push('/budget')
+      router.push('/welcome')
     } else {
       setIsBudgetSet(true)
     }
@@ -76,10 +37,7 @@ export default function Home() {
   return (
     <main className='w-full'>
       <div className='flex flex-col gap-6'>
-        <div className='p-[10px]'>
-          <Image src='/svg/prev.svg' width={14} height={14} alt='Go Back' />
-        </div>
-        <div className='absolute left-1/2 -translate-x-1/2 transform text-[17px] text-[#8E8E93]'>
+        <div className='flex items-center justify-center text-[17px] text-[#8E8E93]'>
           All Expenses
         </div>
 
@@ -106,13 +64,13 @@ export default function Home() {
 
         <div className='text-[22px] font-bold'>
           {isBudgetSet
-            ? 'Select the categories to reduce'
+            ? 'Select the categories to redue'
             : 'Try to spend less than last time!'}
         </div>
         <div className='h-[1px] w-full bg-[#E5E5EA]'></div>
       </div>
 
-      <PushNotifi />
+      {/* <PushNotifi /> */}
 
       <section className='flex flex-col gap-6 py-10'>
         {sortedCategoryItems.map((item) => (
@@ -142,7 +100,7 @@ export default function Home() {
           }`}
         >
           <span className='text-[17px] text-[#FFF]'>
-            {isBudgetSet && !isAnyItemSelected ? 'Get Started' : 'Set a budget'}
+            {isBudgetSet && !isAnyItemSelected ? 'Confirmed' : 'Set a budget'}
           </span>{' '}
         </div>
       </section>

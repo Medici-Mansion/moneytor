@@ -1,6 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import CategoryItemWithStatusBar from '~/components/element/CategoryItemWithStatusBar'
+import GoAllButton from '~/components/element/GoAllButton'
 
 const categoryItems = [
   {
@@ -56,21 +59,7 @@ const page = () => {
           />
         ))}
       </section>
-      <div className='flex items-center justify-center'>
-        <div className='flex items-center gap-2 rounded-[100px] border-[1.4px] border-[#F2F2F7] bg-white px-4 py-2'>
-          <span className='text-custom-gray text-[15px]'>
-            View All Expenses
-          </span>
-          <span>
-            <Image
-              src='/svg/view.svg'
-              width={8}
-              height={14}
-              alt='Go All Expenses'
-            />
-          </span>
-        </div>
-      </div>
+      <GoAllButton />
     </main>
   )
 }
