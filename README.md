@@ -1,29 +1,58 @@
-# Create T3 App
+# Moneytor
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Help reducing unnecessary spending.
 
-## What's next? How do I make an app with this?
+### Tech Stack
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+| Technology       | Documentation                          |
+| ---------------- | -------------------------------------- |
+| **Next.js**      | [nextjs.org](https://nextjs.org)       |
+| **NextAuth.js**  | [next-auth.js.org](https://next-auth.js.org) |
+| **Prisma**       | [prisma.io](https://prisma.io)         |
+| **Drizzle ORM**  | [drizzle.team](https://orm.drizzle.team) |
+| **Tailwind CSS** | [tailwindcss.com](https://tailwindcss.com) |
+| **tRPC**         | [trpc.io](https://trpc.io)             |
+| **Moenytor App** | [Medici Mansion Repo](https://github.com/Medici-Mansion/moenytor-app) |
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+### Research Summary
+Survey - 86 participants
+Interview - 10 participants
+Insights we gained
+Less than a third of people who want to manage unnecessary spending actually do it successfully (pie chart capture)
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Reasons of those who can't manage it (35 subjective responses)
+(Numerical evidence) People feel the need to manage their spending but
+those who haven't succeeded or haven't tried tend to not check their spending details (occasionally) or only look at the total amount.
+Reverse engineering of numbers
+(Numerical evidence) They don’t manage because it’s inconvenient to check and manage details - 16 out of 35 subjective responses
+It's hard to change spending habits.
+They don't know how to manage their spending.
 
-## Learn More
+Characteristics of those who manage well (23 subjective responses)
+They check their spending details very often.
+They review their spending every day to a week - 14 cases
+They review their spending daily - 6 cases
+They set a monthly budget and check how much they have spent frequently and adjust accordingly.
+Splitting accounts, setting a monthly budget
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Current service situation
+Integrated financial apps are not designed with spending reduction at the core (rather, they need to promote financial transactions through increased spending)
+Of course, there are people who manage well using integrated financial apps. However, there is no UX designed for those who want to reduce spending.
+Bank apps are generally poor in usability.
+Budgeting apps are services focused on people who have the will to manage money and are already doing it well.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Solution Concept:
+Help people who struggle to reduce unnecessary expenses
+to easily and enjoyably
+check their daily spending details,
+and review their spending.
 
-## How do I deploy this?
+### Features:
+- Easy to start with spending-based goal recommendation and setting
+- Duolingo-style push notifications that help review daily spending
+- A home screen widget that easily shows daily goal achievement status
+- Automatic categorization of spending details to facilitate easy review
+- A mechanism to feel accomplishment based on one's spending management performance
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
