@@ -108,6 +108,7 @@ const page = () => {
         body: 'Save or Starve🤌 Did you check your spending? ',
         interruptionLevel: 'critical',
       },
+      identifier: 'final',
       trigger: { seconds: 5 },
     })
   }

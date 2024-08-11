@@ -28,6 +28,7 @@ export default function Home() {
           body: 'What are you doin’ with your legs?🦵🦵\nEven Trump walks that distance.',
           interruptionLevel: 'critical',
         },
+        identifier: 'a',
         trigger: { seconds: 5 },
       })
 
@@ -37,6 +38,7 @@ export default function Home() {
           body: 'Taxi Service - 50,000 KRW',
           interruptionLevel: 'critical',
         },
+        identifier: 'apple',
         trigger: { seconds: 5 },
       })
     } else {
