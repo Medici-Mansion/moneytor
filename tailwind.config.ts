@@ -24,6 +24,7 @@ const config = {
       },
       colors: {
         'custom-gray': '#8E8E93',
+        moneytor: '#4FC3D7',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

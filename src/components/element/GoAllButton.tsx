@@ -8,7 +8,7 @@ const GoAllButton = () => {
   const router = useRouter()
 
   return (
-    <div className='flex items-center justify-center'>
+    <div className='flex cursor-pointer items-center justify-center'>
       <div
         onClick={() => router.push('/all')}
         className='flex items-center gap-2 rounded-[100px] border-[1.4px] border-[#F2F2F7] bg-white px-4 py-2'
