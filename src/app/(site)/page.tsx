@@ -24,16 +24,17 @@ export default function Home() {
       router.push('/welcome')
       await bridge.pushNotification({
         content: {
-          title: 'APPLE PAY',
-          body: 'Taxi Service - 50,000 KRW',
+          title: 'Hi! Its’ Moneytor',
+          body: 'What are you doin’ with your legs?🦵🦵\nEven Trump walks that distance.',
           interruptionLevel: 'critical',
         },
         trigger: { seconds: 5 },
       })
+
       await bridge.pushNotification({
         content: {
-          title: 'Hi! Its’ Moneytor',
-          body: 'What are you doin’ with your legs?🦵🦵\nEven Trump walks that distance.',
+          title: 'APPLE PAY',
+          body: 'Taxi Service - 50,000 KRW',
           interruptionLevel: 'critical',
         },
         trigger: { seconds: 5 },
