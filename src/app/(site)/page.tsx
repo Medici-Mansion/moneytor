@@ -92,7 +92,7 @@ export default function Home() {
       <section className='flex items-center justify-center'>
         <div
           onClick={handleButtonClick}
-          className={`fixed bottom-[52px] left-0 right-0 mx-auto flex w-full max-w-[360px] items-center justify-center rounded-xl px-[14px] py-[8px] ${
+          className={`fixed bottom-[52px] left-0 right-0 mx-auto flex h-[50px] w-full max-w-[360px] items-center justify-center rounded-xl px-[14px] py-[8px] ${
             isAnyItemSelected
               ? `bg-[#4FC3D7]`
               : isBudgetSet
