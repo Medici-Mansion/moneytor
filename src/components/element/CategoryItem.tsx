@@ -11,6 +11,7 @@ interface CategoryItemProps {
   onClick?: () => void
   clickable?: boolean
   isSelected?: boolean
+  today?: string
 }
 const CategoryItem: React.FC<CategoryItemProps> = ({
   icon,
@@ -22,6 +23,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({
   onClick,
   clickable,
   isSelected,
+  today,
 }) => {
   return (
     <div
@@ -39,7 +41,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({
       <div className='flex gap-4'>
         <div
           className='flex h-[73px] w-[73px] items-center justify-center rounded-full bg-[rgba(255,204,0,0.10)] p-2'
-          style={{ backgroundColor: bgColor }}
+          style={{ backgroundColor: isSelected ? 'transparent' : bgColor }}
         >
           <Image src={icon} height={height} width={width} alt={title} />
         </div>
@@ -47,7 +49,14 @@ const CategoryItem: React.FC<CategoryItemProps> = ({
           <div>{title}</div>
         </div>
       </div>
-      <div className='p-4'>{amount}</div>
+      <div className='p-4'>
+        <div>{amount}</div>
+        <div
+          className={`text-end ${isSelected ? 'text-[#4FC3D7]' : 'text-[#8E8E93]'} `}
+        >
+          {today}
+        </div>
+      </div>
     </div>
   )
 }

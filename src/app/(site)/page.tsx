@@ -85,6 +85,7 @@ export default function Home() {
             onClick={() => handleCategoryItemClick(item.id)}
             clickable={isBudgetSet}
             isSelected={selectedItems.includes(item.id)}
+            today={item.today}
           />
         ))}
       </section>
