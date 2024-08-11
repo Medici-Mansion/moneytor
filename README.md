@@ -3,7 +3,27 @@
 
 Help reducing unnecessary spending.
 
-### Tech Stack
+<br />
+
+
+## Features
+![image](https://github.com/user-attachments/assets/7a1b651a-e255-4b89-83b3-d2ddfbb0edeb)
+- Easy to start with spending-based goal recommendation and setting
+- Duolingo-style push notifications that help review daily spending
+- A home screen widget that easily shows daily goal achievement status
+![image](https://github.com/user-attachments/assets/0e1ef569-67a5-42c2-a776-10309ae2fa77)
+- Automatic categorization of spending details to facilitate easy review
+- A mechanism to feel accomplishment based on one's spending management performance
+
+<br />
+
+## UI Flow
+![image](https://github.com/user-attachments/assets/252ca1fc-a706-41f6-a3cf-f20de0b0cb26)
+![image](https://github.com/user-attachments/assets/9260c890-b692-40ac-a16e-ff44d20ae705)
+
+<br />
+
+## Tech Stack
 
 | Technology       | Documentation                          |
 | ---------------- | -------------------------------------- |
@@ -15,7 +35,9 @@ Help reducing unnecessary spending.
 | **tRPC**         | [trpc.io](https://trpc.io)             |
 | **Moenytor App** | [Medici Mansion Repo](https://github.com/Medici-Mansion/moenytor-app) |
 
-### Research Summary
+<br />
+
+## Research Summary
 Survey - 86 participants
 Interview - 10 participants
 Insights we gained
@@ -42,20 +64,14 @@ Of course, there are people who manage well using integrated financial apps. How
 Bank apps are generally poor in usability.
 Budgeting apps are services focused on people who have the will to manage money and are already doing it well.
 
+<br />
 
-### Solution Concept:
+
+## Solution Concept:
 Help people who struggle to reduce unnecessary expenses
 to easily and enjoyably
 check their daily spending details,
 and review their spending.
 
-### Features:
-![image](https://github.com/user-attachments/assets/7a1b651a-e255-4b89-83b3-d2ddfbb0edeb)
-- Easy to start with spending-based goal recommendation and setting
-- Duolingo-style push notifications that help review daily spending
-- A home screen widget that easily shows daily goal achievement status
-![image](https://github.com/user-attachments/assets/0e1ef569-67a5-42c2-a776-10309ae2fa77)
-- Automatic categorization of spending details to facilitate easy review
-- A mechanism to feel accomplishment based on one's spending management performance
 
 
