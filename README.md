@@ -1,4 +1,5 @@
 # Moneytor
+![image](https://github.com/user-attachments/assets/be1e206c-636d-4517-9f5a-0dd3eed63334)
 
 Help reducing unnecessary spending.
 
@@ -49,9 +50,11 @@ check their daily spending details,
 and review their spending.
 
 ### Features:
+![image](https://github.com/user-attachments/assets/7a1b651a-e255-4b89-83b3-d2ddfbb0edeb)
 - Easy to start with spending-based goal recommendation and setting
 - Duolingo-style push notifications that help review daily spending
 - A home screen widget that easily shows daily goal achievement status
+![image](https://github.com/user-attachments/assets/0e1ef569-67a5-42c2-a776-10309ae2fa77)
 - Automatic categorization of spending details to facilitate easy review
 - A mechanism to feel accomplishment based on one's spending management performance
 
