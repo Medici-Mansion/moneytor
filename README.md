@@ -18,8 +18,9 @@ Help reducing unnecessary spending.
 <br />
 
 ## UI Flow
-![image](https://github.com/user-attachments/assets/252ca1fc-a706-41f6-a3cf-f20de0b0cb26)
-![image](https://github.com/user-attachments/assets/9260c890-b692-40ac-a16e-ff44d20ae705)
+![image](https://github.com/user-attachments/assets/ba6c3d68-20f9-4858-a38a-9fd32a493eb0)
+![image](https://github.com/user-attachments/assets/2a66cbe2-912a-493a-90d4-0c7f43229e5d)
+![image](https://github.com/user-attachments/assets/33bec325-6ebe-4a84-ac2c-2c0937254ab5)
 
 <br />
 
